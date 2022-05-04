@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:get_it/get_it.dart';
 import 'package:initialproject/core/injection/injection.dart';
@@ -6,22 +7,23 @@ import 'package:injectable/injectable.dart';
 import 'app_config.dart';
 
 class AppEnv {
-  void injectFlavor({String? flavor}) async {
+  Future<void> injectFlavor({String? flavor}) async {
     final flavor =
         await const MethodChannel('flavor').invokeMethod('getFlavor');
+    debugPrint('Running Env ${flavor.toString()}');
     if (flavor == Environment.dev) {
-      startDevelopment();
+      await startDevelopment();
     } else if (flavor == Environment.test) {
-      startUat();
+      await startUat();
     } else if (flavor == Environment.prod) {
-      startProduction();
+      await startProduction();
     } else {
-      startDevelopment();
+      await startDevelopment();
     }
   }
 
-  void startDevelopment() {
-    configureInjection(environment: Environment.dev);
+  Future<void> startDevelopment() async {
+    await configureInjection(environment: Environment.dev);
     GetIt.I<AppConfig>().initialize(
       appName: 'DEV',
       flavorName: Environment.dev,
@@ -30,8 +32,8 @@ class AppEnv {
     );
   }
 
-  void startUat() {
-    configureInjection(environment: Environment.test);
+  Future<void> startUat() async {
+    await configureInjection(environment: Environment.test);
     GetIt.I<AppConfig>().initialize(
       appName: 'UAT',
       flavorName: 'uat',
@@ -39,8 +41,8 @@ class AppEnv {
     );
   }
 
-  void startProduction() {
-    configureInjection(environment: Environment.prod);
+  Future<void> startProduction() async {
+    await configureInjection(environment: Environment.prod);
     GetIt.I<AppConfig>().initialize(
         appName: '',
         flavorName: 'production',
