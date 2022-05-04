@@ -5,7 +5,6 @@ import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:initialproject/config/app_env.dart';
 import 'package:initialproject/core/routes/auth_guard.dart';
-import 'package:injectable/injectable.dart';
 
 import 'config/app_theme.dart';
 import 'core/injection/injection.dart';
@@ -13,16 +12,16 @@ import 'core/routes/app_router.gr.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await configureInjection(environment: Environment.dev);
   EasyLoading.instance.backgroundColor = Colors.orangeAccent;
   EasyLoading.instance.userInteractions = false;
   EasyLoading.instance.dismissOnTap = false;
-  AppEnv().injectFlavor();
+  await AppEnv().injectFlavor();
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
   final _appRouter = AppRouter(authGuard: getIt<AuthGuard>());
+
   MyApp({Key? key}) : super(key: key);
 
   @override

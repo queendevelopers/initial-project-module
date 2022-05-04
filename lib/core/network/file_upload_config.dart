@@ -1,6 +1,6 @@
 import 'package:flutter_rest_client/flutter_rest_client.dart';
-import 'package:injectable/injectable.dart';
 import 'package:initialproject/config/app_config.dart';
+import 'package:injectable/injectable.dart';
 import 'package:super_module/super_module.dart';
 
 import 'http_helper_event_listener.dart';
