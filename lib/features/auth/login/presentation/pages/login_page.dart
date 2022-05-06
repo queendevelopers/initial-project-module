@@ -7,10 +7,7 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     debugPrint('Hello Devs!!');
     return Center(
-      child: Text(
-        'Hello Devs!!',
-        style: Theme.of(context).textTheme.headline4,
-      ),
+      child: Text('Hello Devs!!', style: Theme.of(context).textTheme.headline4),
     );
   }
 }

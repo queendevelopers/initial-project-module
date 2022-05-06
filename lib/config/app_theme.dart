@@ -5,7 +5,7 @@ class AppTheme {
   AppTheme._();
 
   static final ThemeData lightTheme = ThemeData(
-    // fontFamily: 'Lato',
+    fontFamily: 'poppins',
     brightness: Brightness.light,
     backgroundColor: colorBackground,
     primaryColor: colorPrimary,
