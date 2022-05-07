@@ -74,7 +74,6 @@ class _AppTextFieldState extends State<AppTextField> {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-        style: const TextStyle(fontFamily: 'Inter', color: Colors.black),
         key: widget.key1,
         readOnly: widget.readOnly,
         cursorColor: widget.textColor,
