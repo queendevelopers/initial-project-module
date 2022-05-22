@@ -18,13 +18,13 @@ dependencies:
   json_serializable: ^6.2.0
   injectable: ^1.5.0
   get_it: ^7.2.0
-  auto_route: ^3.2.0
+  auto_route: ^4.0.1
   flutter_easyloading: ^3.0.3
   shared_preferences: ^2.0.13
   flutter_screenutil: ^5.5.1
   flutter_bloc: ^7.3.3
-  super_module: ^0.4.28+28
-  flutter_rest_client: ^0.0.7
+  super_module: ^0.5.2
+  flutter_rest_client: ^0.1.1
 
 dev_dependencies:
   flutter_test:
@@ -32,7 +32,7 @@ dev_dependencies:
   flutter_native_splash: ^2.1.6
   build_runner: ^2.1.7
   injectable_generator: ^1.5.2
-  auto_route_generator: ^3.2.3
+  auto_route_generator: ^4.0.0
   flutter_launcher_icons: ^0.9.2
   flutter_lints: ^1.0.4
 
