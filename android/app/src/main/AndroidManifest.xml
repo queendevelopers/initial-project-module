@@ -27,6 +27,10 @@
                 android:value="@string/facebook_app_id"/>
             <meta-data android:name="com.facebook.sdk.ClientToken"
                 android:value="@string/facebook_client_token"/>
+            <meta-data
+                android:name="io.flutter.embedding.android.SplashScreenDrawable"
+                android:resource="@drawable/launch_background"
+                />
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
