@@ -36,4 +36,8 @@ class HttpConfig implements IHttpConfig {
 
   @override
   Future<String?> get token => _iSessionManager.getToken();
+
+  @override
+  // TODO: implement socketUrl
+  String get socketUrl => throw UnimplementedError();
 }

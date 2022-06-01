@@ -37,4 +37,8 @@ class FileUploadConfig implements IHttpConfig {
 
   @override
   IHttpHelperEventListening get listener => httpListener;
+
+  @override
+  // TODO: implement socketUrl
+  String get socketUrl => throw UnimplementedError();
 }
