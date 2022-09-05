@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -15,7 +17,9 @@ void main() async {
   EasyLoading.instance.backgroundColor = Colors.orangeAccent;
   EasyLoading.instance.userInteractions = false;
   EasyLoading.instance.dismissOnTap = false;
-  await AppEnv().injectFlavor();
+  if (Platform.isAndroid) {
+    await AppEnv().injectFlavor();
+  }
   runApp(MyApp());
 }
 
