@@ -1,6 +1,6 @@
 # initialproject
 
-### A initial flutter project by Swivt app developement team. This project uses getIt for dependency injection and flavors for dev, uat & prod built.
+#### A initial flutter project by Swivt app developement team. This project uses getIt for dependency injection and flavors for dev, uat & prod built.
 
 ## Getting Started
 
