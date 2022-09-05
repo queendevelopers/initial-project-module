@@ -1,10 +1,10 @@
 # initialproject
 
-###A initial flutter project by Swivt app developement team. This project uses getIt for dependency injection and flavors for dev, uat & prod built.
+### A initial flutter project by Swivt app developement team. This project uses getIt for dependency injection and flavors for dev, uat & prod built.
 
 ## Getting Started
 
-####Setup
+#### Setup
 1) Fork Project from the original repository
 2) setup upstream (optional)
 3) Replace package name "com.organization.initialproject" with your "com.yourorganization.yourprojectname". (shift+cmd+R in Android Studio and shift+cmd+H in vscode IDE)
