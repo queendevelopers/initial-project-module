@@ -4,7 +4,7 @@
 
 ## Getting Started
 
-#### Setup
+### Setup
 1) Fork Project from the original repository
 2) setup upstream (optional)
 3) Replace package name ```com.organization.initialproject``` with your `com.yourorganization.yourprojectname`. (shift+cmd+R in Android Studio and shift+cmd+H in vscode IDE)
