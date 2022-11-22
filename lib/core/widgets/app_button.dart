@@ -13,7 +13,7 @@ class AppButton extends StatelessWidget {
   final Color? backgroundColor;
   final OutlinedBorder outlinedBorder;
 
-  AppButton({
+  const AppButton({
     Key? key,
     required this.buttonText,
     this.onPressed,

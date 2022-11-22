@@ -1,3 +1,4 @@
+import 'package:dio/src/dio_mixin.dart';
 import 'package:flutter_rest_client/flutter_rest_client.dart';
 import 'package:initialproject/config/app_config.dart';
 import 'package:injectable/injectable.dart';
@@ -39,6 +40,8 @@ class FileUploadConfig implements IHttpConfig {
   IHttpHelperEventListening get listener => httpListener;
 
   @override
-  // TODO: implement socketUrl
   String get socketUrl => throw UnimplementedError();
+
+  @override
+  Interceptor? customRequestInterceptor;
 }

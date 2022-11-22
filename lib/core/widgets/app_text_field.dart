@@ -16,8 +16,8 @@ class AppTextField extends StatefulWidget {
   final bool obscureText;
   final bool isDense;
   final int maxLength;
-  final maxLine;
-  final key1;
+  final int maxLine;
+  final String? key1;
   final bool digitsOnly;
   final Color? labelColor;
   final String prefixText;
@@ -74,7 +74,7 @@ class _AppTextFieldState extends State<AppTextField> {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-        key: widget.key1,
+        key: widget.key,
         readOnly: widget.readOnly,
         cursorColor: widget.textColor,
         validator: widget.validator,

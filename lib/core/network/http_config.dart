@@ -1,3 +1,4 @@
+import 'package:dio/src/dio_mixin.dart';
 import 'package:flutter_rest_client/flutter_rest_client.dart';
 import 'package:initialproject/config/app_config.dart';
 import 'package:initialproject/core/constants/keys/app_keys.dart';
@@ -38,6 +39,8 @@ class HttpConfig implements IHttpConfig {
   Future<String?> get token => _iSessionManager.getToken();
 
   @override
-  // TODO: implement socketUrl
   String get socketUrl => throw UnimplementedError();
+
+  @override
+  Interceptor? customRequestInterceptor;
 }

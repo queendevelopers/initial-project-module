@@ -12,9 +12,6 @@ import 'core/routes/app_router.gr.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  EasyLoading.instance.backgroundColor = Colors.orangeAccent;
-  EasyLoading.instance.userInteractions = false;
-  EasyLoading.instance.dismissOnTap = false;
   await AppEnv().injectFlavor();
   runApp(MyApp());
 }
@@ -38,7 +35,7 @@ class MyApp extends StatelessWidget {
             child: ScreenUtilInit(
               designSize: const Size(360,
                   690), // The [Size] of the device in the design draft, in dp
-              builder: (_) => MaterialApp.router(
+              builder: (_, __) => MaterialApp.router(
                   debugShowCheckedModeBanner: false,
                   theme: AppTheme.lightTheme,
                   themeMode: ThemeMode.light,

@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:get_it/get_it.dart';
@@ -8,17 +10,21 @@ import 'app_config.dart';
 
 class AppEnv {
   Future<void> injectFlavor({String? flavor}) async {
-    final flavor =
-        await const MethodChannel('flavor').invokeMethod('getFlavor');
-    debugPrint('Running Env ${flavor.toString()}');
-    if (flavor == Environment.dev) {
-      await startDevelopment();
-    } else if (flavor == Environment.test) {
-      await startUat();
-    } else if (flavor == Environment.prod) {
-      await startProduction();
+    if (Platform.isAndroid || Platform.isIOS) {
+      final flavor =
+          await const MethodChannel('flavor').invokeMethod('getFlavor');
+      debugPrint('Running Env ${flavor.toString()}');
+      if (flavor == Environment.dev) {
+        await startDevelopment();
+      } else if (flavor == Environment.test) {
+        await startUat();
+      } else if (flavor == Environment.prod) {
+        await startProduction();
+      } else {
+        await startDevelopment();
+      }
     } else {
-      await startDevelopment();
+      startProduction();
     }
   }
 
