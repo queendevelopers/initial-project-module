@@ -1,6 +1,6 @@
 # initialproject
 
-#### A initial flutter project by Swivt app developement team. This project uses getIt for dependency injection and flavors for dev, uat & prod built.
+#### A initial flutter project by Nikesh Maharjan to app developement team. This project uses getIt for dependency injection and flavors for dev, uat & prod built. While working in new project it takes around 4 hours to setup the project. To save the time of creating project and updating project to up-to-date this initial project concept has been created. 
 
 ## Getting Started
 
