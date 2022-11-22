@@ -21,7 +21,7 @@
  this keeps navigation business logic in it's own way, maintains project clean architecture.
  Don\'t forget to run the build_runner command. ^_^
 
- 2) UI.
+ 2) User Interface
 - Use of `ThemeData` for UI styling, configuring colors, sizes, replace default styling in flutter widget.
 see some of already used sample `/lib/config/app_theme.dart`
 - While creating reusable widget use `app_widget_name` to make better naming. for example app_text_field, app_button, etc
