@@ -15,8 +15,8 @@
 
 ### Instructions
 1) Router
-- Using [auto_route] (https://pub.dev/packages/auto_route) takes flutter navigation to one step further on authenticating.
- Usage: Register the page inside `lib/core/routes/app_router.dart` enable guards if needed (can be custom logic with custom class).
+- Using [auto_route](https://pub.dev/packages/auto_route) takes flutter navigation to one step further on authenticating.
+ Usage: Register the page inside `lib/core/routes/app_router` enable guards if needed (can be custom logic with custom class).
  For example look at `core/routes/auth_guard` onNavigation override method, where it can write custom login & navigate to different page from here
  this keeps navigation business logic in it's own way, maintains project clean architecture.
  Don\'t forget to run the build_runner command. ^_^
@@ -26,7 +26,7 @@
 see some of already used sample `/lib/config/app_theme.dart`
 - While creating reusable widget use `app_widget_name` to make better naming. for example app_text_field, app_button, etc
 also keep in mind, you can modify widget with `.copywith(parms)` for modifying params in widget. also make sure to place them inside `core/widgets/`
-- You can use of `styled_widget` to make UI code shorter & clearer to understand. But I recommend not to use `Row` and `Column` widget from styled widget
+- You can use of [styled_widget](https://pub.dev/packages/styled_widget) to make UI code shorter & clearer to understand. But I recommend not to use `Row` and `Column` widget from styled widget
 because dart widget inspection doesn't recognizes it.
 
 
