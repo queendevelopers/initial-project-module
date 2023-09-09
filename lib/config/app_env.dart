@@ -1,29 +1,31 @@
 import 'dart:io';
-
-import 'package:flutter/foundation.dart';
-import 'package:flutter/services.dart';
-import 'package:get_it/get_it.dart';
-import 'package:initialproject/core/injection/injection.dart';
-import 'package:injectable/injectable.dart';
-
 import 'app_config.dart';
+import 'package:get_it/get_it.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter/foundation.dart';
+import 'package:injectable/injectable.dart';
+import 'package:initialproject/core/injection/injection.dart';
 
 class AppEnv {
   Future<void> injectFlavor({String? flavor}) async {
-    if (Platform.isAndroid || Platform.isIOS) {
-      final flavor =
-          await const MethodChannel('flavor').invokeMethod('getFlavor');
-      debugPrint('Running Env ${flavor.toString()}');
-      if (flavor == Environment.dev) {
-        await startDevelopment();
-      } else if (flavor == Environment.test) {
-        await startUat();
-      } else if (flavor == Environment.prod) {
-        await startProduction();
+    try {
+      if (Platform.isAndroid || Platform.isIOS) {
+        final flavor =
+            await const MethodChannel('flavor').invokeMethod('getFlavor');
+        debugPrint('Running Env ${flavor.toString()}');
+        if (flavor == Environment.dev) {
+          await startDevelopment();
+        } else if (flavor == Environment.test) {
+          await startUat();
+        } else if (flavor == Environment.prod) {
+          await startProduction();
+        } else {
+          await startDevelopment();
+        }
       } else {
-        await startDevelopment();
+        startProduction();
       }
-    } else {
+    } catch (e) {
       startProduction();
     }
   }

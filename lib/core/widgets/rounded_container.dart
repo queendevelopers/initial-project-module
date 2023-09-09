@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class RoundedContainer extends StatelessWidget {
   final Color backgroundColor;
@@ -43,7 +42,7 @@ class RoundedContainer extends StatelessWidget {
       child: Card(
         color: Colors.transparent,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(radius.r),
+          borderRadius: BorderRadius.circular(radius),
         ),
         elevation: elevation,
         child: Container(
@@ -60,7 +59,7 @@ class RoundedContainer extends StatelessWidget {
             image: image != null
                 ? DecorationImage(image: image!, fit: BoxFit.cover)
                 : null,
-            borderRadius: BorderRadius.circular(radius.r),
+            borderRadius: BorderRadius.circular(radius),
           ),
           child: child,
         ),

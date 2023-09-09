@@ -1,9 +1,9 @@
 import 'package:dio/src/dio_mixin.dart';
-import 'package:flutter_rest_client/flutter_rest_client.dart';
-import 'package:initialproject/config/app_config.dart';
-import 'package:initialproject/core/constants/keys/app_keys.dart';
 import 'package:injectable/injectable.dart';
 import 'package:super_module/super_module.dart';
+import 'package:initialproject/config/app_config.dart';
+import 'package:flutter_rest_client/flutter_rest_client.dart';
+import 'package:initialproject/core/constants/keys/app_keys.dart';
 
 @Named('httpConfig')
 @Singleton(as: IHttpConfig)
@@ -43,4 +43,18 @@ class HttpConfig implements IHttpConfig {
 
   @override
   Interceptor? customRequestInterceptor;
+
+  @override
+  // TODO: implement refreshToken
+  Future<String?> get refreshToken => throw UnimplementedError();
+
+  @override
+  // TODO: implement refreshTokenUrl
+  String get refreshTokenUrl => throw UnimplementedError();
+
+  @override
+  Future<void>? onTokenRefreshed(String accessToken, String refreshToken) {
+    // TODO: implement onTokenRefreshed
+    throw UnimplementedError();
+  }
 }

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:styled_widget/styled_widget.dart';
 
 enum BorderStyle { underline, circular }
@@ -121,7 +120,7 @@ class _AppTextFieldState extends State<AppTextField> {
           focusedBorder: widget.enableFocusBorder
               ? Theme.of(context).inputDecorationTheme.focusedBorder
               : Theme.of(context).inputDecorationTheme.disabledBorder,
-          errorStyle: TextStyle(fontSize: 12.sp),
+          errorStyle: TextStyle(fontSize: 12),
           labelStyle: TextStyle(color: widget.labelColor, fontSize: 16),
           contentPadding: widget.contentPadding,
           labelText: widget.labelText,
