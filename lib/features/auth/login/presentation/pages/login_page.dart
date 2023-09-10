@@ -13,7 +13,8 @@ class LoginPage extends StatelessWidget {
     return Center(
       child: Text(
           'Hello Devs!!\nYou\'re using env: ${getIt<AppConfig>().flavorName}',
-          style: Theme.of(context).textTheme.headline4),
+          textAlign: TextAlign.center,
+          style: Theme.of(context).textTheme.headlineMedium),
     );
   }
 }
