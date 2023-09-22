@@ -1,5 +1,5 @@
 import 'package:auto_route/auto_route.dart' as _i2;
-import 'package:initialproject/features/auth/login/presentation/pages/login_page.dart'
+import 'package:initialproject/features/auth/login/presentation/pages/home_page.dart'
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
 // **************************************************************************
@@ -20,14 +20,14 @@ abstract class $AppRouter extends _i2.RootStackRouter {
     LoginRoute.name: (routeData) {
       return _i2.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i1.LoginPage(),
+        child: const _i1.HomePage(),
       );
     }
   };
 }
 
 /// generated route for
-/// [_i1.LoginPage]
+/// [_i1.HomePage]
 class LoginRoute extends _i2.PageRouteInfo<void> {
   const LoginRoute({List<_i2.PageRouteInfo>? children})
       : super(

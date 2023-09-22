@@ -1,8 +1,9 @@
-import 'package:get_it/get_it.dart';
+import 'injection.config.dart';
+import 'injection.config.dart';
+import 'injection.config.dart';
 import 'package:injectable/injectable.dart';
 import 'package:super_module/super_module.dart';
 
-import 'injection.config.dart';
 
 final GetIt getIt = GetIt.instance;
 

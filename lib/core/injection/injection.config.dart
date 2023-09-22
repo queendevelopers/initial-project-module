@@ -1,3 +1,16 @@
+import 'local_module.dart' as _i12;
+import '../routes/auth_guard.dart' as _i4;
+import 'package:get_it/get_it.dart' as _i1;
+import '../../config/app_config.dart' as _i3;
+import '../network/http_config.dart' as _i11;
+import 'package:injectable/injectable.dart' as _i2;
+import '../network/file_upload_config.dart' as _i8;
+import 'package:super_module/super_module.dart' as _i5;
+import '../network/http_helper_event_listener.dart' as _i9;
+import 'package:shared_preferences/shared_preferences.dart' as _i10;
+import 'package:flutter_rest_client/flutter_rest_client.dart' as _i7;
+import 'package:flutter_secure_storage/flutter_secure_storage.dart' as _i6;
+import 'register_module.dart' as _i13; // ignore_for_file: unnecessary_lambdas
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
 // **************************************************************************
@@ -5,20 +18,7 @@
 // **************************************************************************
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'package:flutter_rest_client/flutter_rest_client.dart' as _i7;
-import 'package:flutter_secure_storage/flutter_secure_storage.dart' as _i6;
-import 'package:get_it/get_it.dart' as _i1;
-import 'package:injectable/injectable.dart' as _i2;
-import 'package:shared_preferences/shared_preferences.dart' as _i10;
-import 'package:super_module/super_module.dart' as _i5;
 
-import '../../config/app_config.dart' as _i3;
-import '../network/file_upload_config.dart' as _i8;
-import '../network/http_config.dart' as _i11;
-import '../network/http_helper_event_listener.dart' as _i9;
-import '../routes/auth_guard.dart' as _i4;
-import 'local_module.dart' as _i12;
-import 'register_module.dart' as _i13; // ignore_for_file: unnecessary_lambdas
 
 // ignore_for_file: lines_longer_than_80_chars
 /// initializes the registration of provided dependencies inside of [GetIt]
