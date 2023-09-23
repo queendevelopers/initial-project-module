@@ -11,9 +11,9 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(body: Stack(children: [
-        Placeholder(fallbackWidth: 800,),
+        // Placeholder(fallbackWidth: 800,),
         Row(mainAxisSize: MainAxisSize.min,mainAxisAlignment: MainAxisAlignment.center, children: [
-          Placeholder(fallbackHeight: 20,strokeWidth: 20,),
+          // Placeholder(fallbackHeight: 20,),
           Text("CodeZenInfoTech"),
           Spacer(),
           Text("Reviews"),
@@ -21,8 +21,8 @@ class HomePage extends StatelessWidget {
           Text("Company"),
         ],),
 
-        Text("Scale your development team"),
-        Text("with top software engineers")
+        // Text("Scale your development team"),
+        // Text("with top software engineers")
     ]),);
   }
 }
