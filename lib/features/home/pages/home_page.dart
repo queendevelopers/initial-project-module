@@ -1,7 +1,6 @@
 import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:auto_route/auto_route.dart';
-import 'package:initialproject/features/home/widgets/app_navigation_bar.dart';
 import 'package:super_module/super_module.dart';
 import 'package:initialproject/core/widgets/app_button.dart';
 import 'package:initialproject/core/routes/app_router.gr.dart';
@@ -9,8 +8,10 @@ import 'package:responsive_framework/responsive_framework.dart';
 import 'package:initialproject/core/widgets/rounded_container.dart';
 import 'package:initialproject/core/widgets/app_circular_avatar.dart';
 import 'package:initialproject/core/constants/dummy_data/dummy_data.dart';
+import 'package:initialproject/features/home/widgets/app_navigation_bar.dart';
 import 'package:initialproject/features/home/widgets/mega_footer_widget.dart';
 import 'package:initialproject/features/home/widgets/video_player_widget.dart';
+
 
 @RoutePage()
 class HomePage extends StatelessWidget {
@@ -130,11 +131,8 @@ class HomePage extends StatelessWidget {
                             ResponsiveBreakpoints.of(context).screenWidth *
                                 0.15)
                     : EdgeInsets.zero,
-                children: [
-                  AppNavigationBar(),
-
-                  // Text("Scale your development team"),
-                  // Text("with top software engineers")
+                children: const [ 
+                 AppNavigationBar(),
                 ])
           ],
         ),
