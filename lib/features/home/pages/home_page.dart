@@ -1,13 +1,16 @@
+import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:super_module/super_module.dart';
 import 'package:initialproject/core/widgets/app_button.dart';
+import 'package:initialproject/core/routes/app_router.gr.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'package:initialproject/core/widgets/rounded_container.dart';
 import 'package:initialproject/core/widgets/app_circular_avatar.dart';
 import 'package:initialproject/core/constants/dummy_data/dummy_data.dart';
-import 'package:initialproject/features/home/login/presentation/widgets/mega_footer_widget.dart';
-import 'package:initialproject/features/home/login/presentation/widgets/video_player_widget.dart';
+import 'package:initialproject/features/home/widgets/mega_footer_widget.dart';
+import 'package:initialproject/features/home/widgets/video_player_widget.dart';
+
 
 @RoutePage()
 class HomePage extends StatelessWidget {
@@ -141,19 +144,25 @@ class HomePage extends StatelessWidget {
                           fallbackWidth: 16,
                         )),
                         horizontalSpacing(space: 16),
-                        Text("CodeZenInfoTech",
-                            style: Theme.of(context).textTheme.titleLarge),
+                        TextButton(onPressed: ()=>context.navigateTo(const HomeRoute()),
+                          child: Text("CodeZenInfoTech",
+                              style: Theme.of(context).textTheme.titleLarge),
+                        ),
                         const Spacer(),
-                        Text(
-                          "Services",
-                          style: Theme.of(context).textTheme.titleMedium,
+                        TextButton(onPressed: ()=> context.pushRoute(const ServicesRoute()),
+                          child: Text(
+                            "Services",
+                            style: Theme.of(context).textTheme.titleMedium,
+                          ),
                         ),
                         horizontalSpacing(
                           space: 16,
                         ),
-                        Text(
-                          "About Us",
-                          style: Theme.of(context).textTheme.titleMedium,
+                        TextButton(onPressed: () => context.pushRoute(const AboutUsRoute()),
+                          child: Text(
+                            "About Us",
+                            style: Theme.of(context).textTheme.titleMedium,
+                          ),
                         ),
                       ],
                     ),
@@ -166,7 +175,7 @@ class HomePage extends StatelessWidget {
         ),
         verticalSpacing(space: 32),
         Text(
-          "Join hundreds of amazing companies that outsource with Arcanys",
+          "Join amazing companies that outsource with CodeZenInfoTech",
           style: Theme.of(context).textTheme.titleLarge,
         ),
         verticalSpacing(space: 32),
