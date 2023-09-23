@@ -19,9 +19,15 @@ class FooterWidget extends StatelessWidget {
           children: [
             const Text("2023 © CodeZenInfoTech LLC."),
             const Spacer(),
-            TextButton(onPressed: () => context.navigateTo(const PrivacyPolicyRoute()), child: const Text("Privacy Policy"))
+            TextButton(
+                    onPressed: () =>
+                        context.navigateTo(const PrivacyPolicyRoute()),
+                    child: const Text("Privacy Policy"))
                 .padding(horizontal: 4),
-            TextButton(onPressed: () => context.navigateTo(const TermsAndConditionRoute()), child: const Text("Terms of use"))
+            TextButton(
+                    onPressed: () =>
+                        context.navigateTo(const TermsAndConditionRoute()),
+                    child: const Text("Terms of use"))
                 .padding(horizontal: 4),
           ],
         ),

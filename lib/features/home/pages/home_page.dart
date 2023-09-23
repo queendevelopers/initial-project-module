@@ -1,6 +1,7 @@
 import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:auto_route/auto_route.dart';
+import 'package:initialproject/features/home/widgets/app_navigation_bar.dart';
 import 'package:super_module/super_module.dart';
 import 'package:initialproject/core/widgets/app_button.dart';
 import 'package:initialproject/core/routes/app_router.gr.dart';
@@ -10,7 +11,6 @@ import 'package:initialproject/core/widgets/app_circular_avatar.dart';
 import 'package:initialproject/core/constants/dummy_data/dummy_data.dart';
 import 'package:initialproject/features/home/widgets/mega_footer_widget.dart';
 import 'package:initialproject/features/home/widgets/video_player_widget.dart';
-
 
 @RoutePage()
 class HomePage extends StatelessWidget {
@@ -131,42 +131,7 @@ class HomePage extends StatelessWidget {
                                 0.15)
                     : EdgeInsets.zero,
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.only(top: 25),
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      mainAxisSize: MainAxisSize.min,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        const FittedBox(
-                            child: Placeholder(
-                          fallbackHeight: 16,
-                          fallbackWidth: 16,
-                        )),
-                        horizontalSpacing(space: 16),
-                        TextButton(onPressed: ()=>context.navigateTo(const HomeRoute()),
-                          child: Text("CodeZenInfoTech",
-                              style: Theme.of(context).textTheme.titleLarge),
-                        ),
-                        const Spacer(),
-                        TextButton(onPressed: ()=> context.pushRoute(const ServicesRoute()),
-                          child: Text(
-                            "Services",
-                            style: Theme.of(context).textTheme.titleMedium,
-                          ),
-                        ),
-                        horizontalSpacing(
-                          space: 16,
-                        ),
-                        TextButton(onPressed: () => context.pushRoute(const AboutUsRoute()),
-                          child: Text(
-                            "About Us",
-                            style: Theme.of(context).textTheme.titleMedium,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
+                  AppNavigationBar(),
 
                   // Text("Scale your development team"),
                   // Text("with top software engineers")
