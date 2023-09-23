@@ -27,6 +27,7 @@ dependencies:
   flutter_rest_client:
     path: /Users/dev/apps/rest-client
   responsive_framework: ^1.1.1
+  video_player: ^2.7.2
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -42,6 +43,7 @@ flutter:
 
   assets:
     - assets/fonts/poppins/
+    - assets/videos/
 
   fonts:
     - family: poppins
