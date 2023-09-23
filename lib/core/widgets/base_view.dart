@@ -49,11 +49,6 @@ class BaseView extends StatelessWidget {
 
   PreferredSize toolbar(BuildContext context) {
     return PreferredSize(
-      preferredSize: Size.fromHeight(bottomWidget != null
-          ? 140.0
-          : titleText != null
-              ? 56.0
-              : 0.0),
       child: AppBar(
         centerTitle: true,
         leading: leading,
@@ -63,6 +58,11 @@ class BaseView extends StatelessWidget {
         ),
         bottom: bottomWidget,
       ),
+      preferredSize: Size.fromHeight(bottomWidget != null
+          ? 140.0
+          : titleText != null
+              ? 56.0
+              : 0.0),
     );
   }
 }
