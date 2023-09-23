@@ -26,6 +26,7 @@ dependencies:
     path: /Users/dev/apps/super-module
   flutter_rest_client:
     path: /Users/dev/apps/rest-client
+  responsive_framework: ^1.1.1
 dev_dependencies:
   flutter_test:
     sdk: flutter
