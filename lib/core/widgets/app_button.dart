@@ -34,9 +34,6 @@ class AppButton extends StatelessWidget {
             : MediaQuery.of(context).size.width / 1.10,
         child: ElevatedButton(
           onPressed: onPressed,
-          style: ElevatedButton.styleFrom(
-              foregroundColor: Colors.white, backgroundColor: backgroundColor ?? Theme.of(context).colorScheme.secondary, elevation: 0,
-              shape: outlinedBorder),
           child: Row(
             mainAxisSize: MainAxisSize.min,
             children: [
@@ -51,6 +48,12 @@ class AppButton extends StatelessWidget {
               )
             ],
           ),
+          style: ElevatedButton.styleFrom(
+              elevation: 0,
+              primary:
+                  backgroundColor ?? Theme.of(context).colorScheme.secondary,
+              onPrimary: Colors.white,
+              shape: outlinedBorder),
         )).center(heightFactor: 1.8);
   }
 }

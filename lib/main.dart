@@ -2,9 +2,11 @@ import 'config/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'core/injection/injection.dart';
+import 'package:injectable/injectable.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:super_module/super_module.dart';
 import 'package:initialproject/config/app_env.dart';
+import 'package:initialproject/config/app_config.dart';
 import 'package:initialproject/core/routes/app_router.dart';
 
 void main() async {
