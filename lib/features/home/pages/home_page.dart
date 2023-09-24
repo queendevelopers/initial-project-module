@@ -1,9 +1,6 @@
-import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:super_module/super_module.dart';
-import 'package:initialproject/core/widgets/app_button.dart';
-import 'package:initialproject/core/routes/app_router.gr.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'package:initialproject/core/widgets/rounded_container.dart';
 import 'package:initialproject/core/widgets/app_circular_avatar.dart';
@@ -25,7 +22,7 @@ class HomePage extends StatelessWidget {
         Stack(
           children: [
             Container(
-                color: Colors.white,
+                color: Colors.black,
                 width: double.infinity,
                 height: ResponsiveBreakpoints.of(context).screenHeight * 0.65,
                 child: Stack(children: [
@@ -35,7 +32,7 @@ class HomePage extends StatelessWidget {
                             ResponsiveBreakpoints.of(context).screenWidth *
                                 0.15),
                     child: const Opacity(
-                        opacity: 0.25,
+                        opacity: 0.35,
                         child: VideoPlayerWidget(
                             assetPath: "assets/videos/office.mp4")),
                   ),
@@ -53,7 +50,7 @@ class HomePage extends StatelessWidget {
                           RichText(
                               text: TextSpan(
                                   style:
-                                      Theme.of(context).textTheme.headlineLarge,
+                                      Theme.of(context).textTheme.headlineLarge!.copyWith(color: Colors.white),
                                   children: [
                                 const TextSpan(
                                     text: "Scale your development team"),
@@ -68,7 +65,7 @@ class HomePage extends StatelessWidget {
                                         "\n\nWe’re the #1 software development talent\nprovider to companies worldwide.",
                                     style: Theme.of(context)
                                         .textTheme
-                                        .headlineMedium)
+                                        .headlineMedium!.copyWith(color: Colors.white))
                               ])),
                           const Spacer(),
                           FittedBox(

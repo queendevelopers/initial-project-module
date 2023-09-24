@@ -24,14 +24,14 @@ class AppNavigationBar extends StatelessWidget {
           TextButton(
             onPressed: () => context.navigateTo(const HomeRoute()),
             child: Text("CodeZenInfoTech",
-                style: Theme.of(context).textTheme.titleLarge),
+                style: Theme.of(context).textTheme.titleLarge!.copyWith(color: Colors.white)),
           ),
           const Spacer(),
           TextButton(
             onPressed: () => context.pushRoute(const ServicesRoute()),
             child: Text(
               "Services",
-              style: Theme.of(context).textTheme.titleMedium,
+              style: Theme.of(context).textTheme.titleMedium!.copyWith(color: Colors.white),
             ),
           ),
           horizontalSpacing(
@@ -41,7 +41,7 @@ class AppNavigationBar extends StatelessWidget {
             onPressed: () => context.pushRoute(const AboutUsRoute()),
             child: Text(
               "About Us",
-              style: Theme.of(context).textTheme.titleMedium,
+              style: Theme.of(context).textTheme.titleMedium!.copyWith(color: Colors.white),
             ),
           ),
         ],
