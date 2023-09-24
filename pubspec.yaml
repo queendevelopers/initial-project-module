@@ -23,9 +23,13 @@ dependencies:
   shared_preferences: ^2.0.13
   flutter_bloc: ^8.1.3
   super_module: 
-    path: /Users/dev/apps/super-module
+    git:
+      url: git@github.com:queendevelopers/super_module.git
+      ref: v3.13.3
   flutter_rest_client:
-    path: /Users/dev/apps/rest-client
+    git:
+      url: git@github.com:queendevelopers/rest_client.git
+      ref: v1.1
   responsive_framework: ^1.1.1
   video_player: ^2.7.2
 dev_dependencies:
